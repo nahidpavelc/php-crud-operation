@@ -25,29 +25,33 @@ include('read-script.php');
     .table-data table {
       border-collapse: collapse;
       max-width: 100%;
-      width: 90%;
-      border: 2px solid black;
+      width: 100%;
+      /* border: 2px solid black; */
       border-radius: 10px;
     }
 
     .add-btn {
-      padding: 10px 15px;
-      margin: 10px 0px;
-      background-color: #13a22c;
-      border-radius: 10px;
-      text-decoration: none;
-      border: 3px solid white;
+      background-color: #434140;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      font-size: 20px;
+      border: 3px solid #434140;
     }
 
     .add-btn:hover {
       border: 3px solid black;
-      background-color: #00b51c;
-      color: #000000;
+      background-color: #0A58CA;
+      color: #ffffff;
     }
 
     .add-btn-a {
       text-decoration: none;
-      color: #ddd;
+      color: #ffffff;
     }
 
     th,

@@ -1,5 +1,4 @@
 <?php
-
 include('create-script.php');
 ?>
 
@@ -26,9 +25,9 @@ include('create-script.php');
     .user-detail form {
       height: auto;
       border: 3px solid #000000;
+      border-radius: 10px;
       padding: 16px;
       background-color: white;
-      border-radius: 10px;
       /* width: 65%; */
     }
 
@@ -60,28 +59,29 @@ include('create-script.php');
     }
 
     .add-btn {
-      padding: 10px 15px;
-      margin: 10px 0px;
-      background-color: #13a22c;
-      border-radius: 10px;
-      text-decoration: none;
-      border: 3px solid white;
+      background-color: #434140;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      font-size: 20px;
     }
 
     .add-btn:hover {
-      border: 3px solid black;
-      background-color: #00b51c;
-      color: #000000;
+      background-color: #0A58CA;
+      color: #ffffff;
     }
 
     .add-btn-a {
       text-decoration: none;
-      color: #ddd;
+      color: #ffffff;
     }
 
     label {
       font-size: 18px;
-      ;
     }
 
     button[type=submit]:hover {
@@ -115,11 +115,11 @@ include('create-script.php');
       <h2>Create Form</h2>
     </div>
 
-    <p style="color:red"><?php if (!empty($msg)) {
-                            echo $msg;
-                          } ?></p>
+    <p style="color:green"><?php if (!empty($msg)) {
+                              echo $msg;
+                            } ?></p>
 
-    <a class="add-btn-a" href="user-table.php"><button class="add-btn" type="button">BACK</button></a>
+    <!-- <a class="add-btn-a" href="user-table.php"><button class="add-btn" type="button">BACK</button></a> -->
 
     <form method="post" action="">
       <label>Full Name</label>
@@ -133,8 +133,11 @@ include('create-script.php');
 
       <label>Country</label>
       <input type="text" placeholder="Enter Full Country" name="country" required>
-
-      <button type="submit" name="create">Submit</button>
+      <div class="d-flex">
+        <button class="me-1" type="submit" name="create">Submit</button>
+        <!-- <button class="ms-1" type="submit" name="create">Back</button> -->
+        <a class="add-btn-a" href="user-table.php"><button class="add-btn" type="button">BACK</button></a>
+      </div>
     </form>
   </div>
   </div>
