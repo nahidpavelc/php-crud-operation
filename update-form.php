@@ -132,7 +132,7 @@ include('update-script.php');
   <div class="user-detail">
 
     <div class="form-title text-center pt-5">
-      <h2>UPDATE USER</h2>
+      <h2 style="color: green;">UPDATE USER</h2>
     </div>
 
     <p style="color:red">

@@ -78,9 +78,7 @@ function update_data($connection, $id)
                 permanent_address_thana= '$permanent_address_thana',
                 permanent_address_district= '$permanent_address_district',
                 blood_group= '$blood_group',
-                student_photo= '$student_photo',
-                
-                WHERE id=$id";
+                student_photo= '$student_photo' WHERE id=$id";
 
   $exec = mysqli_query($connection, $query);
 

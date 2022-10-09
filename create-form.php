@@ -43,6 +43,16 @@ include('create-script.php');
       border-radius: 10px;
     }
 
+    select {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
     /* input[type=text]:focus,
     input[type=password]:focus {
       background-color: #ddd;
@@ -120,14 +130,11 @@ include('create-script.php');
   <div class="user-detail">
 
     <div class="form-title text-center pt-5">
-      <h2>Create Form</h2>
+      <h2 style="color: green;">Create Form</h2>
     </div>
-
-    <div class="alert alert-primary" role="alert">
-      <h2 style="color:green"><?php if (!empty($msg)) {
-                                echo $msg;
-                              } ?></h2>
-    </div>
+    <h2 style="color:green"><?php if (!empty($msg)) {
+                              echo $msg;
+                            } ?></h2>
 
     <!-- <a class="add-btn-a" href="user-table.php"><button class="add-btn" type="button">BACK</button></a> -->
 
@@ -301,17 +308,10 @@ include('create-script.php');
         <div class="col">
           <div class="card h-100">
             <label>Verified</label>
-            <input type="text" placeholder="Enter Full Name" name="verified">
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <label>Verified</label>
             <select name="verified">
               <option>Select Option</option>
-              <option value="<?php echo isset($editData) ? $editData['verified'] : '' ?>">Yes</option>
-              <option value="<?php echo isset($editData) ? $editData['verified'] : '' ?>">No</option>
+              <option name="verified">Yes</option>
+              <option name="verified">No</option>
             </select>
           </div>
         </div>
