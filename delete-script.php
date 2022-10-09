@@ -11,7 +11,7 @@ if (isset($_GET['delete'])) {
 function delete_data($connection, $id)
 {
 
-  $query = "DELETE from user_details WHERE id=$id";
+  $query = "DELETE from tbl_student WHERE id=$id";
   $exec = mysqli_query($connection, $query);
 
   if ($exec) {

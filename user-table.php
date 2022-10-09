@@ -12,22 +12,23 @@ include('read-script.php');
     table,
     td,
     th {
-      border: 1px solid #ddd;
+      border: 2px solid #ddd;
       text-align: left;
+      /* border-radius: 10px; */
     }
 
     .table-data {
-      width: 65%;
+      width: 80%;
       float: none;
       margin: auto;
     }
 
-    .table-data table {
-      border-collapse: collapse;
+    table {
+      /* border-collapse: collapse; */
       max-width: 100%;
       width: 100%;
-      /* border: 2px solid black; */
-      border-radius: 10px;
+      border: 3px solid #434140;
+      border-radius: 10px !important;
     }
 
     .add-btn {
@@ -40,11 +41,12 @@ include('read-script.php');
       width: 100%;
       opacity: 0.9;
       font-size: 20px;
-      border: 3px solid #434140;
+      /* border: 3px solid #434140; */
+      border-radius: 10px;
     }
 
     .add-btn:hover {
-      border: 3px solid black;
+      /* border: 3px solid black; */
       background-color: #0A58CA;
       color: #ffffff;
     }
@@ -56,7 +58,12 @@ include('read-script.php');
 
     th,
     td {
+      padding: 10px;
+    }
+
+    th {
       padding: 15px;
+      background-color: #b4b4b4;
     }
 
     body {
@@ -83,23 +90,32 @@ include('read-script.php');
     <table border="1">
       <tr>
         <th>S.N</th>
-        <th>Full Name</th>
-        <th>Email Address</th>
-        <th>City</th>
-        <th>Country</th>
+        <!-- <th>Photo</th> -->
+
+        <th>Student Name</th>
+        <th>Address</th>
+        <th>Student Phone</th>
+
+        <th>Guardian Name</th>
+        <th>Guardian Phone</th>
         <th>Edit</th>
         <th>Delete</th>
+
       </tr>
       <?php
       if (count($fetchData) > 0) {
         $sn = 1;
         foreach ($fetchData as $data) {
       ?> <tr>
-            <td><?php echo $sn; ?></td>
-            <td><?php echo $data['full_name']; ?></td>
-            <td><?php echo $data['email_address']; ?></td>
-            <td><?php echo $data['city']; ?></td>
-            <td><?php echo $data['country']; ?></td>
+            <td class="text-center"><?php echo $sn; ?></td>
+            <!-- <td>
+              <img src="./image/<?php echo $data['student_photo']; ?>"  >
+            </td> -->
+            <td><?php echo $data['student_name']; ?></td>
+            <td><?php echo $data['home_address']; ?></td>
+            <td><?php echo $data['student_phone']; ?></td>
+            <td><?php echo $data['guardian_name']; ?></td>
+            <td><?php echo $data['guardian_phone']; ?></td>
 
             <td class="text-center"><a href="update-form.php?edit=<?php echo $data['id']; ?>"><i class="fa-solid fa-pen-to-square h4"></i></a></td>
             <td class="text-center"><a href="delete-script.php?delete=<?php echo $data['id']; ?>"><i class="fa-solid fa-trash h4"></i></a></td>
